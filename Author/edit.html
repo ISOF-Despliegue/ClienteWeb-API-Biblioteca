@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Editar Autor</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="edit-body">
+
+  <div class="edit-card">
+    <h2>Editar Autor</h2>
+
+    <input type="text" id="name" placeholder="Nombre" />
+    <input type="number" id="birthYear" placeholder="Año de Nacimiento" />
+    <input type="text" id="country" placeholder="País" />
+
+    <div class="edit-buttons">
+      <button class="btn-secondary" onclick="goBack()">Cancelar</button>
+      <button class="btn-primary" onclick="updateAuthor()">Guardar</button>
+    </div>
+  </div>
+
+  <script src="edit.js"></script>
+</body>
+</html>

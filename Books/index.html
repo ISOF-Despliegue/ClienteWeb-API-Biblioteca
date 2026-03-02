@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Biblioteca</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>📚 Biblioteca</h1>
+
+  <!-- FORMULARIO -->
+<section class="card">
+  <h2>Agregar Libro</h2>
+  <form id="bookForm">
+    <input type="text" id="title" placeholder="Título" required />
+    <input type="text" id="genre" placeholder="Género" required />
+    <input type="number" id="year" placeholder="Año" required />
+    <button type="submit">Guardar Libro</button>
+  </form>
+</section>
+
+  <!-- LISTA -->
+  <section class="card">
+    <h2>Lista de Libros</h2>
+    <button onclick="getBooks()">Cargar Libros</button>
+    <div id="books"></div>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Editar Libro</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="edit-body">
+
+  <div class="edit-card">
+    <h2>Editar Libro</h2>
+
+    <form id="editForm">
+      <input type="text" id="title" placeholder="Título" required />
+      <input type="text" id="genre" placeholder="Género" required />
+      <input type="number" id="year" placeholder="Año" required />
+
+      <div class="edit-buttons">
+        <button type="button" class="btn-primary" onclick="updateBook()">
+          Guardar cambios
+        </button>
+
+        <button type="button" class="btn-secondary" onclick="goBack()">
+          Cancelar
+        </button>
+      </div>
+    </form>
+  </div>
+
+  <script src="edit.js"></script>
+</body>
+</html>

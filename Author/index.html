@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Biblioteca - Autores</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>📚 Biblioteca - Autores</h1>
+
+  <!-- FORMULARIO -->
+  <section class="card">
+    <h2>Agregar Autor</h2>
+    <form id="authorForm">
+      <input type="text" id="name" placeholder="Nombre" required />
+      <input type="number" id="birthYear" placeholder="Año de Nacimiento" required />
+      <input type="text" id="country" placeholder="País" required />
+      <button type="submit">Guardar Autor</button>
+    </form>
+  </section>
+
+  <!-- LISTA -->
+  <section class="card">
+    <h2>Lista de Autores</h2>
+    <button onclick="getAuthors()">Cargar Autores</button>
+    <div id="authors"></div>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+const API_URL = "http://localhost:3000/author";
+
+const params = new URLSearchParams(window.location.search);
+const id = params.get("id");
+
+// ===============================
+// CARGAR AUTOR
+// ===============================
+async function loadAuthor() {
+  const response = await fetch(`${API_URL}/${id}`);
+  const author = await response.json();
+
+  document.getElementById("name").value = author.name;
+  document.getElementById("birthYear").value = author.birthYear;
+  document.getElementById("country").value = author.country;
+}
+
+loadAuthor();
+
+// ===============================
+// ACTUALIZAR AUTOR
+// ===============================
+async function updateAuthor() {
+  const name = document.getElementById("name").value;
+  const age = document.getElementById("age").value;
+  const country = document.getElementById("country").value;
+
+  await fetch(`${API_URL}/${id}`, {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({ name, age, country })
+  });
+
+  window.location.href = "index.html";
+}
+
+// ===============================
+function goBack() {
+  window.location.href = "index.html";
+}
