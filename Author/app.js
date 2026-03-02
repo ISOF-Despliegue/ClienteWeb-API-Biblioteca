@@ -33,7 +33,7 @@ document.getElementById("authorForm").addEventListener("submit", async (e) => {
   e.preventDefault();
 
   const name = document.getElementById("name").value;
-  const age = document.getElementById("birthYear").value;
+  const birthYear = document.getElementById("birthYear").value;
   const country = document.getElementById("country").value;
 
   await fetch(API_URL, {
@@ -41,7 +41,7 @@ document.getElementById("authorForm").addEventListener("submit", async (e) => {
     headers: {
       "Content-Type": "application/json"
     },
-    body: JSON.stringify({ name, age, country })
+    body: JSON.stringify({ name, birthYear, country })
   });
 
   e.target.reset();
