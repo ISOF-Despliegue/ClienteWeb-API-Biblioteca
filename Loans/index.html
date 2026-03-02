@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Biblioteca</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>📚 Prestamos</h1>
+
+  <!-- FORMULARIO -->
+<section class="card">
+  <h2>Nuevo Préstamo</h2>
+  <form id="loanForm">
+    <select id="bookId" required>
+  <option value="">Selecciona un libro</option>
+</select>
+    <input type="text" id="borrowerName" placeholder="Nombre del prestatario" required />
+    <input type="date" id="loanDate" required />
+    <button type="submit">Crear Préstamo</button>
+  </form>
+</section>
+
+  <!-- LISTA -->
+  <section class="card">
+    <h2>Lista de Préstamos</h2>
+    <button onclick="getLoans()">Cargar Préstamos</button>
+    <div id="loans"></div>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>
