@@ -33,7 +33,7 @@ document.getElementById("authorForm").addEventListener("submit", async (e) => {
   e.preventDefault();
 
   const name = document.getElementById("name").value;
-  const birthYear = document.getElementById("birthYear").value;
+  const birthYear = Number(document.getElementById("birthYear").value);
   const country = document.getElementById("country").value;
 
   await fetch(API_URL, {

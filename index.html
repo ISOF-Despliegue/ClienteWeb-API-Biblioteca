@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Biblioteca API</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="home-body">
+
+  <div class="home-card">
+    <h1>📚 Biblioteca API</h1>
+
+    <div class="home-buttons">
+      <button onclick="goTo('Author')">Autores</button>
+      <button onclick="goTo('Books')">Libros</button>
+      <button onclick="goTo('Loans')">Préstamos</button>
+    </div>
+  </div>
+
+  <script>
+    function goTo(section) {
+      window.location.href = `/${section}/index.html`;
+    }
+  </script>
+
+</body>
+</html>
